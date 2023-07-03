@@ -58,3 +58,20 @@ def funzioneGlobale():
 print(funzioneGlobale())
 print(y)
 
+#overloading nonn supportato
+""" 
+def funz():
+    print("stampa 1")
+
+def funz(var):
+    print("stampa 2")
+
+def funz(var1, var2):
+    print("stampa 3")
+#errori
+funz()
+funz(1)
+
+#ok
+funz(1,2) 
+"""
