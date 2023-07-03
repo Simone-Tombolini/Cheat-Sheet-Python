@@ -59,5 +59,7 @@ print(mario.oreSettimanali)
 luigi.oreSettimanali +=4
 print(luigi.oreSettimanali)
 
+#Todo completare
+
 
 
