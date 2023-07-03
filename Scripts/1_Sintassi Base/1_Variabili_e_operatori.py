@@ -1,5 +1,5 @@
 #No dichiarazione 
-x = 3
+x= 3
 #Tipizzazione variabile automatica
 pi = 3.14
 
