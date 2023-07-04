@@ -4,7 +4,13 @@ opzioni = ["mele", "pere", "banane", "anguria"]
 
 #definizione delle funzioni
 
-
+def cambia(parametro):
+    #scrivo su console
+    print(parametro)
+    
+    #modifica testo di una label
+    testo_output.config(text = parametro)
+    
 
 
 #region creazione finestra
@@ -21,38 +27,14 @@ finestra.resizable(False, False)
 finestra.configure(background="white")
 #endregion
 
-testo_output = tk.Label(finestra, text="0000000000a", fg="black", font=("Helvetica", 16))
+testo_output = tk.Label(finestra, text="", fg="black", font=("Helvetica", 16))
 testo_output.grid(row=1, column=0)
 
 variable = tk.StringVar(finestra)
 variable.set(opzioni[0]) # default value
 
-w = tk.OptionMenu(finestra, variable, *opzioni)
-w.grid(row=0, column=0, sticky= "W")
-tk.mainloop()
-
-
-
-def ripeti(testo_output):
-    #scrivo su console
-    print(variable.get())
-
-    #crea un testo
-    
-    #creazione di una label
-    testo_output.config(text = "variable.get()")
-
-#region bottone
-#inserimento primo bottone
-primoBottone = tk.Button(text="Saluta!", command = ripeti(testo_output))
-
-#posizione in una griglia
-primoBottone.grid(row=3, column=0, sticky= "W")
-#endregion
-
-
-
-
+dropDown = tk.OptionMenu(finestra, variable, *opzioni, command=cambia)
+dropDown.grid(row=0, column=0, sticky= "W")
 
 #mount della finestra
 if __name__ == "__main__":

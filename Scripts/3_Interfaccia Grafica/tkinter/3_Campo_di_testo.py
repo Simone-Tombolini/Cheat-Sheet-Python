@@ -12,9 +12,8 @@ def ripeti():
 
     #scrivo su console
     print(testo)
-
-    #creazione di iuna label
-    testo_output = tk.Label(finestra, text=testo, fg="black", font=("Helvetica", 16))
+    #riconfigura il testo
+    testo_output.config(text= testo)
     
     #posizionamento
     testo_output.grid(row=3, column=0)
@@ -32,7 +31,8 @@ finestra.resizable(False, False)
 #colore della finestra
 finestra.configure(background="white")
 #endregion
-
+ #creazione di iuna label
+testo_output = tk.Label(finestra, text=testo, fg="black", font=("Helvetica", 16))
 #region bottone
 #inserimento primo bottone
 primoBottone = tk.Button(text="Ripeti!", command = ripeti)

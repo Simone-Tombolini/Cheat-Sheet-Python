@@ -2,6 +2,8 @@ import tkinter as tk
 
 #definizione delle funzioni
 
+testo = ""
+
 def saluta():
     #scrivo su console
     print("ciao")
@@ -9,13 +11,13 @@ def saluta():
     #crea un testo
     testo = "Hello World!"
     
-    #creazione di iuna label
-    testo_output = tk.Label(finestra, text=testo, fg="black", font=("Helvetica", 16))
+    testo_output.config(text=testo)
     
     #posizionamento
     testo_output.grid(row=1, column=0)
 
 #region creazione finestra
+
 #definizione della finestra
 finestra = tk.Tk()
 
@@ -28,6 +30,9 @@ finestra.resizable(False, False)
 #colore della finestra
 finestra.configure(background="white")
 #endregion
+
+#creazione di iuna label
+testo_output = tk.Label(finestra, text=testo, fg="black", font=("Helvetica", 16))
 
 #inserimento primo bottone
 primoBottone = tk.Button(text="Saluta!", command = saluta)
