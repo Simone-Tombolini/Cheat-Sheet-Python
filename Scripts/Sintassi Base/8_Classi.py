@@ -32,32 +32,13 @@ class Studente(Persona):
     
     def printMatricola(self):
         print(self.matricola)
-
-    @classmethod
-    def StudenteDaStringa(cls, stringa):
-        nome, cognome, età , maticola = stringa.split(",") 
-        return cls(nome, cognome, età , maticola)
-    @staticmethod
-    def somma(a,b):
-        print(a+b)
     
-    #ridefinizione deglio operatori
-
-    def __add__(self, altro):
-        """ Solo per fini didattici. Usare i dunder in maniera intelligente! """
-        return self.nome + " " + altro.cognome
-    
-    def __str__(self):
-        return "Studente : " + self.nome + " " + self.cognome
-    
-    def __repr__(self):
-        return "Studente : " + self.nome + " " + self.cognome + " " + str(self.età) + " " + str(self.matricola) 
-
 
 print(Studente.totaleStudenti)
 
 mario = Studente("mario", "rossi", 20, 12345)
 
+#eredito i metodi
 mario.CF()
 
 print(Studente.totaleStudenti)
@@ -72,16 +53,15 @@ print(mario.età)
 
 mario.printMatricola()
 
+
 print(mario.oreSettimanali)
 
 #modifica la variablie di classe per la singola istanza
 luigi.oreSettimanali +=4
 print(luigi.oreSettimanali)
 
-maria = Studente.StudenteDaStringa("maria,rossi,22,12347")
 
-maria.printMatricola()
+#costruttori altenrnativi
 
-maria.somma(3,3)
-print(str(maria))
-print(repr(maria))
+
+
