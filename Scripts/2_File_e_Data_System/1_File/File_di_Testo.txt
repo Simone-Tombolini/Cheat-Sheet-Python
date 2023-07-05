@@ -1,0 +1,5 @@
+Inizio File
+Riga1
+Riga2
+Riga3
+Fine File
