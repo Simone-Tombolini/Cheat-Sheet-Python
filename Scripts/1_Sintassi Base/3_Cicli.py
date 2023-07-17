@@ -18,7 +18,7 @@ print("fine del ciclo con break")
 #il do-while non è supportato nativamente, utilizzare un construtto di questo tipo
 
 while True:
-    y = input("inserisci 0 per terminare il ciclo")
+    y = int(input("inserisci 0 per terminare il ciclo"))
     print("esegui quello che vuoi qui")
     if y == 0:
         break
@@ -55,6 +55,8 @@ for numero in range(2, 11, 2):
     print(numero)
 
 for numero in range(10, -1, -1):
-    print(numero)
+    for numero2 in range(11):
+
+        print(numero)
 
 
