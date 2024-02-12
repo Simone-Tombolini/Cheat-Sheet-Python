@@ -3,7 +3,7 @@ import pyodbc as db
 
 
 #connessione ad un database
-conn = db.connect('DRIVER={SQL Server};SERVER=DESKTOP-W10;DATABASE=test;UID=sa;PWD=hortus')
+conn = db.connect('ConnectionString')
 cursor = conn.cursor()
 
 #Eseguire una select
